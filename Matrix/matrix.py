@@ -55,7 +55,6 @@ class Matrix:
                 result = [[0 for j in range(self.n)] for i in range(self.m)]
                 for i in range(self.m):
                     for j in range(self.n):
-                        print(type(other))
                         if type(other) == int:
                             result[i][j] = self.matrix[i][j] * other
                         elif isinstance(other, Matrix) and self.m == other.m and self.n == other.n:
