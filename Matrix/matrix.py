@@ -75,3 +75,9 @@ class Matrix:
                     for k in range(self.n):
                         result[i][j] += self.matrix[i][k] * other.matrix[k][j]
         return Matrix(result)
+    def transpose(self):
+        result = [[0 for j in range(self.m)]for i in range(self.n)]
+        for i in range(self.m):
+            for j in range(self.n):
+                result[j][i] = self.matrix[i][j]
+        return Matrix(result)
